@@ -1,0 +1,10 @@
+diff --git a/node_modules/@react-native-firebase/app/lib/internal/web/firebaseFirestore.js b/node_modules/@react-native-firebase/app/lib/internal/web/firebaseFirestore.js
+index e3a7517..78e5c31 100644
+--- a/node_modules/@react-native-firebase/app/lib/internal/web/firebaseFirestore.js
++++ b/node_modules/@react-native-firebase/app/lib/internal/web/firebaseFirestore.js
+@@ -1,4 +1,4 @@
+ // We need to share firebase imports between modules, otherwise
+ // apps and instances of the firebase modules are not shared.
+ export { getApp } from 'firebase/app';
+-export * from 'firebase/firestore/lite';
++export * from 'firebase/firestore';
