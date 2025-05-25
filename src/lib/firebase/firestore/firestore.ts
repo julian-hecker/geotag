@@ -1,7 +1,5 @@
 import { getFirestore } from '@react-native-firebase/firestore';
-
-import { firebase } from '.';
+import { app } from '../app';
 
 export * from '@react-native-firebase/firestore';
-
-export const db = getFirestore(firebase);
+export const db = getFirestore(app);
