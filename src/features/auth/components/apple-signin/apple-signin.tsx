@@ -1,20 +1,20 @@
 import { auth, OAuthProvider, signInWithPopup } from '@/lib/firebase/auth';
 import { Button } from 'react-native';
 
-const provider = new OAuthProvider('google.com');
+const provider = new OAuthProvider('apple.com');
 provider.addScope('email');
-provider.addScope('profile');
+provider.addScope('name');
 
-async function handleGoogleSignIn() {
+async function handleAppleSignin() {
     try {
         const userCredential = await signInWithPopup(auth, provider);
         console.log(userCredential);
     } catch (error) {
-        console.error('Google Sign-in error:', error);
+        console.error('Apple Sign-in error:', error);
         throw error;
     }
 }
 
-export const GoogleSigninButton = () => {
-    return <Button title="Sign in with Google" onPress={handleGoogleSignIn} />;
+export const AppleSigninButton = () => {
+    return <Button title="Sign in with Apple" onPress={handleAppleSignin} />;
 };

@@ -1,5 +1,7 @@
-import { GoogleSignin } from '@react-native-google-signin/google-signin';
-import { Button } from 'react-native';
+import {
+    GoogleSignin,
+    GoogleSigninButton as Button,
+} from '@react-native-google-signin/google-signin';
 
 import { GOOGLE_IOS_CLIENT_ID, GOOGLE_WEB_CLIENT_ID } from '@/constants/environment';
 import { auth, GoogleAuthProvider, signInWithCredential } from '@/lib/firebase/auth';
@@ -22,5 +24,5 @@ async function handleGoogleSignIn() {
 }
 
 export const GoogleSigninButton = () => {
-    return <Button title="Sign in with Google" onPress={handleGoogleSignIn} />;
+    return <Button onPress={handleGoogleSignIn} size={1} style={{ width: '100%' }} />;
 };
